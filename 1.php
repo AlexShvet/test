@@ -5,8 +5,9 @@ $array[] = $number;//массив
 }
 
 $start = hrtime(true);//время начала сортировки пузырьком
-for($j = 1; $j <= count($array)-1; $j++){
-    for($i = 0; $i <= (count($array)-1)-$j; $i++){
+$count = count($array)-1;
+for($j = 1; $j <= $count ; $j++){
+    for($i = 0; $i <= $count-$j; $i++){
         if($array[$i]>$array[$i+1]){
             list($array[$i],$array[$i+1]) = array($array[$i+1],$array[$i]);
         }//взял с сайта
